@@ -74,5 +74,4 @@ for (let i = 0; i < teamMembers.length; i++) {
     text.innerHTML = `${teamMembers[i].fullName} ${teamMembers[i].job} ${teamMembers[i].profilePicture}`
     // inserisco il paragrafo con il testo nel div nell'html
     paragraph.appendChild(text)
-
 }
