@@ -28,7 +28,7 @@
 
 
 // Creo l’array di oggetti con le informazioni fornite.
-teamMembers = [
+const teamMembers = [
     {
         fullName: 'Wayne Barnett',
         job: 'Founder & CEO',
@@ -61,6 +61,18 @@ teamMembers = [
     },
 ]
 
-// Stampare su console le informazioni di nome, ruolo e la stringa della foto
-for (let i = 0; i < teamMembers.length; i++)
+const paragraph = document.getElementById("paragraph");
+let span;
+// Stampo su console le informazioni di nome, ruolo e la stringa della foto
+for (let i = 0; i < teamMembers.length; i++) {
     console.log(teamMembers[i].fullName, teamMembers[i].job, teamMembers[i].profilePicture)
+    // Stampo le stesse informazioni su DOM sottoforma di stringhe
+
+    // creo un paragrafo
+    let text = document.createElement('p');
+    // inserisco i dati nel paragrafo sopra creato
+    text.innerHTML = `${teamMembers[i].fullName} ${teamMembers[i].job} ${teamMembers[i].profilePicture}`
+    // inserisco il paragrafo con il testo nel div nell'html
+    paragraph.appendChild(text)
+
+}
